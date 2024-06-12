@@ -1,0 +1,65 @@
+Scripture Memorizer Program
+The Scripture Memorizer program helps users memorize scriptures by progressively hiding words from the scripture text until the entire text is hidden. The program utilizes principles of object-oriented design, encapsulation, and provides a user-friendly interface to interact with the scripture text.
+
+Program Requirements
+Functional Requirements:
+
+1. Store a scripture, including both the reference and the text.
+2. Handle scriptures with multiple verses.
+3. Display the full scripture and then hide words progressively.
+4. Prompt the user to either press the enter key or type 'quit'.
+5. End the program if the user types 'quit'.
+6. Hide a few random words from the scripture upon pressing the enter key and display the updated scripture.
+7. Continue until all words are hidden, then end the program.
+
+Design Requirements:
+
+1. Use encapsulation with proper use of classes and methods.
+2. Contain at least 3 additional classes:
+3. Scripture
+4. Reference
+5. Word
+6. Provide multiple constructors for handling single and multiple verse references.
+
+Classes and Their Responsibilities
+1. Scripture Class:
+
+Attributes:
+reference (Reference): The reference for the scripture.
+text (List[Word]): The list of words in the scripture.
+
+Behaviors:
+__init__(self, reference, text): Initializes the scripture with a reference and text.
+hide_words(self): Hides a few random words in the scripture.
+is_fully_hidden(self): Checks if all words are hidden.
+__str__(self): Returns the scripture text with hidden words.
+
+2. Reference Class:
+
+Attributes:
+book (str): The book of the scripture.
+chapter (int): The chapter of the scripture.
+start_verse (int): The starting verse.
+end_verse (int, optional): The ending verse (for multiple verses).
+
+Behaviors:
+__init__(self, book, chapter, start_verse, end_verse=None): Initializes the reference.
+__str__(self): Returns the formatted scripture reference.
+
+3. Word Class:
+
+Attributes:
+text (str): The word text.
+is_hidden (bool): Whether the word is hidden.
+
+Behaviors:
+__init__(self, text): Initializes the word.
+hide(self): Hides the word.
+__str__(self): Returns the word text or a placeholder if hidden.
+
+4. Program Class:
+
+Behaviors:
+main(): Runs the main loop of the program.
+display_scripture(scripture): Clears the console and displays the scripture.
+prompt_user(): Prompts the user for input.
