@@ -1,0 +1,24 @@
+Explanation
+
+Classes:
+    Goal: Base class with shared attributes and methods.
+    SimpleGoal: Inherits from Goal, represents a one-time goal.
+    EternalGoal: Inherits from Goal, represents goals with repeated tasks.
+    ChecklistGoal: Inherits from Goal, includes a count of tasks to complete with bonus points.
+
+EternalQuest:
+    Manages goals, score, and level.
+    Methods to add goals, record events, display goals, show score, and save/load progress.
+
+Main Program:
+    Displays menu options for interacting with the quest.
+    Allows users to add new goals, record events, save, and load progress.
+
+Features
+    Inheritance and Polymorphism: Used for goal types.
+    Encapsulation: Properties and methods are contained within their respective classes.
+    Serialization: Saves and loads progress using JSON.
+
+Additional Enhancements
+    Leveling System: Levels up based on score milestones.
+    Flexible Goal Types: Users can add new types of goals interactively.
