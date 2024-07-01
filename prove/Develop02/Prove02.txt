@@ -1,0 +1,15 @@
+JournalEntry Class:
+Represents a journal entry with a prompt, response, and date. It has a constructor to initialize these
+properties and an override of the ToString method for display purposes.
+
+Journal Class:
+Manages the list of journal entries and prompts. It includes methods to add a new entry (AddEntry),
+display all entries (DisplayEntries), save the journal to a file (SaveToFile), and load the journal from a file (LoadFromFile).
+
+Program Class:
+Contains the main method to run the application, displaying a menu to the user and
+handling their input to interact with the journal.
+
+JSON Serialization:
+Uses the JsonConvert class from the Newtonsoft.Json library to serialize and
+deserialize the journal entries for saving and loading from a file.
